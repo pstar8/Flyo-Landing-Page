@@ -12,7 +12,6 @@ body {
 }
 
 header {
-  padding: 1rem 2rem;
   margin: 1rem 0rem;
 }
 
@@ -20,6 +19,7 @@ header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 1.5rem 0;
 }
 
 header nav div {
@@ -85,7 +85,6 @@ main .stay-productive-container {
   align-items: center;
   justify-content: center;
   gap: 5rem;
-  padding: 4rem 2rem;
 }
 
 main .stay-productive-container p {
@@ -202,8 +201,29 @@ span:hover {
   flex-direction: row;
   gap: 2rem;
 }
+
+.footer-icons i {
+  display: flex;
+  border-radius: 50%;
+  border: 1px solid white;
+  width: 25px;
+  height: 25px;
+  align-items: center;
+  padding: 1rem;
+  justify-content: center;
+}
+
 /* Mobile Design */
 @media screen and (max-width: 650px) {
+  header {
+    padding: 1rem 2.5rem;
+  }
+
+  header h2 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
   header nav img {
     width: 20%;
   }
@@ -214,10 +234,11 @@ span:hover {
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
+    margin: 2rem 0;
   }
 
   header .header-article p {
-    font-size: 1rem;
+    font-size: 0.9rem;
     margin: 1rem 0rem;
     text-align: center;
   }
@@ -233,13 +254,22 @@ span:hover {
 
   main {
     font-family: 'Open Sans';
-    background-image: url(./images/bg-curve-mobile.svg);
+  }
+  main .desktop-background {
+    display: none;
+  }
+
+  main .mobile-background {
+    margin: 0;
+    display: flex;
   }
 
   main .stay-productive-container {
     flex-direction: column-reverse;
-    margin-top: 2rem;
+    background-position: 0 0 20rem 0;
+    background-repeat: no-repeat;
     background-color: hsl(240, 75%, 98%);
+    padding: 1rem 2.5rem;
   }
 
   main .stay-productive-container .illustration-2 {
@@ -271,6 +301,10 @@ span:hover {
     text-align: left;
   }
 
+  main .early-access-container {
+    padding: 1rem 2.5rem;
+  }
+
   main .early-access-container h3,
   p {
     margin: 1rem;
@@ -278,7 +312,7 @@ span:hover {
   }
 
   main .early-access-container p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   main .early-access-container .email-getstarted {
@@ -300,6 +334,7 @@ span:hover {
   footer {
     flex-direction: column;
     align-content: flex-start;
+    padding: 1rem 2.5rem;
   }
 
   footer .icon-detail {
@@ -319,13 +354,17 @@ span:hover {
 
 /* Desktop Design */
 @media screen and (min-width: 1000px) {
+  header {
+    padding: 1rem 5rem;
+  }
   header nav img {
     width: 10%;
   }
   header .header-content {
     display: flex;
     flex-direction: row-reverse;
-    /* justify-content: space-between; */
+    justify-content: space-between;
+    margin: 2rem 0;
     align-items: center;
   }
 
@@ -352,13 +391,21 @@ span:hover {
 
   main {
     margin: 5rem 0 0 0;
-    background-image: url(./images/bg-curve-desktop.svg);
     background-repeat: no-repeat;
     background-position: top;
   }
 
+  main .mobile-background {
+    display: none;
+  }
+
+  main .desktop-background {
+    margin: 0;
+    display: flex;
+  }
+
   main .stay-productive-container {
-    /* margin-top: 5rem; */
+    padding: 2rem 5rem;
     flex-direction: row;
     background-color: hsl(240, 75%, 98%);
   }
@@ -395,6 +442,7 @@ span:hover {
     flex-direction: row;
     align-items: center;
     gap: 10rem;
+    padding: 5rem;
   }
 
   main .early-access-container h3 {
@@ -427,6 +475,7 @@ span:hover {
 
   footer {
     flex-direction: row;
+    padding: 5rem;
   }
 
   footer .icon-detail {
