@@ -214,7 +214,7 @@ span:hover {
 }
 
 /* Mobile Design */
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 999px) {
   header {
     padding: 1rem 2.5rem;
   }
